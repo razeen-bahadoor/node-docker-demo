@@ -9,15 +9,6 @@ pipeline {
           metadata: {}
           spec:
             serviceAccount: jenkins-operator-jenkins
-            affinity:
-              nodeAffinity:
-                requiredDuringSchedulingIgnoredDuringExecution:
-                            nodeSelectorTerms:
-                              - matchExpressions:
-                                  - key: role
-                                    operator: In
-                                    values:
-                                      - worker
             containers:
             - name: jnlp
               image: jenkins/jnlp-slave:alpine
