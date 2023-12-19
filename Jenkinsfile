@@ -33,7 +33,7 @@ pipeline {
             steps {
                 container('ubuntu'){
                 script {
-                  def workingDir = checkoutCode("https://github.com/razeen-bahadoor/node-docker-demo.git", "master")
+                  def workingDir = call("https://github.com/razeen-bahadoor/node-docker-demo.git", "master")
                   echo $workingDir
                 }
               }
