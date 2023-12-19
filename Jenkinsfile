@@ -10,11 +10,6 @@ pipeline {
           spec:
             serviceAccount: jenkins-operator-jenkins
             containers:
-            - name: jnlp
-              image: jenkins/jnlp-slave:alpine
-              env:
-                - name: GIT_SSL_NO_VERIFY
-                  value: "true"
             - name: kaniko
               image: gcr.io/kaniko-project/executor:debug
               imagePullPolicy: Always
