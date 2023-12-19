@@ -8,7 +8,7 @@ pipeline {
           kind: Pod
           metadata: {}
           spec:
-            serviceAccount: jenkins-worker
+            serviceAccount: jenkins-operator-jenkins
             affinity:
               nodeAffinity:
                 requiredDuringSchedulingIgnoredDuringExecution:
