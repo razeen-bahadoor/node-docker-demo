@@ -1,4 +1,4 @@
-@Library("jenkins-shared-libs@master") _
+@Library("jenkins-shared-libs@main") _
 
 pipeline {
     agent any
@@ -6,7 +6,7 @@ pipeline {
         stage('Code Checkout') {
             steps {
                 script {
-                  def workingDir = checkoutCode("https://github.com/tejashreeSalvi/django-todo-cicd.git", "develop")
+                  def workingDir = checkoutCode("https://github.com/razeen-bahadoor/node-docker-demo.git", "master")
                   echo $workingDir
                 }
             }
