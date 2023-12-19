@@ -6,4 +6,4 @@ properties([
   ])
 ])
 
-nodejsPipeline(${params.TARGETENV})
+nodejsPipeline(params.TARGETENV)
