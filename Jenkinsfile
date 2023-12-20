@@ -16,6 +16,7 @@ nodejsPipeline(new BuildConfig(
   ],
   awsRegion: params.AWSREGION,
   env : params.TARGETENV,
-  awsCrossAccountDeploymentRole: 'Bounded-jenkins-crossaccount-deployment-role'
+  awsCrossAccountDeploymentRole: 'Bounded-jenkins-crossaccount-deployment-role',
+  appName: 'testapp'
 )
 )
