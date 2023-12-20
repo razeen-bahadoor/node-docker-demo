@@ -2,8 +2,8 @@
 
 properties([
   parameters([
-        choice(name: 'TARGETENV', choices: ['DEV','SIT','UAT','PROD'], description: 'Target environment to deploy to')
-        choice(name: 'AWSREGION', choices: ['eu-west-1'], description: 'Target region to deploy to')
+        choice(name: 'TARGETENV', choices: ['DEV','SIT','UAT','PROD'], defaultValue: 'DEV' ,description: 'Target environment to deploy to'),
+        choice(name: 'AWSREGION', choices: ['eu-west-1'], defaultValue: 'eu-west-1',description: 'Target region to deploy to')
   ])
 ])
 
