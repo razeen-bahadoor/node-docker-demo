@@ -2,8 +2,20 @@
 
 properties([
   parameters([
-        choice(name: 'TARGETENV', choices: ['AUTO','DEV','SIT','UAT','PROD'], description: 'Target environment to deploy to')
+        choice(name: 'TARGETENV', choices: ['DEV','SIT','UAT','PROD'], description: 'Target environment to deploy to')
+        choice(name: 'AWSREGION', choices: ['eu-west-1'], description: 'Target region to deploy to')
   ])
 ])
 
-nodejsPipeline(params.TARGETENV,"testapp")
+nodejsPipeline(new BuildConfig(
+  awsAccountIds : [
+            'DEV': 'xyz',
+            'SIT': 'xyz',
+            'UAT': 'xyz',
+            'PROD': 'xyz'
+  ],
+  awsRegion: params.AWSREGION,
+  env : params.TARGETENV,
+  awsCrossAccountDeploymentRole: 'Bounded-jenkins-crossaccount-deployment-role'
+)
+)
