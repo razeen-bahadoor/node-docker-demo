@@ -20,7 +20,7 @@ nodejsPipeline(new BuildConfig(
   env : params.TARGETENV,
   awsCrossAccountDeploymentRole: 'Bounded-jenkins-crossaccount-deployment-role',
   appName: 'testapp',
-  appType: 'nodejs'
+  appType: 'nodejs',
   imageToDeploy: params.IMAGE_TO_DEPLOY
 )
 )
