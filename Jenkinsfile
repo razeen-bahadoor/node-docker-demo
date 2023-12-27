@@ -21,6 +21,9 @@ nodejsPipeline(new BuildConfig(
   awsCrossAccountDeploymentRole: 'Bounded-jenkins-crossaccount-deployment-role',
   appName: 'testapp',
   appType: 'nodejs',
+  helmChartRepoBaseURL: "https://github.com/razeen-bahadoor",
+  helmChartRepo: "node-docker-demo",
+  helmChartValues : "live/${toLowerCase(params.TARGETENV)}/${appName}",
   imageToDeploy: params.IMAGE_TO_DEPLOY
 )
 )
