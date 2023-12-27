@@ -23,7 +23,7 @@ nodejsPipeline(new BuildConfig(
   appType: 'nodejs',
   helmChartRepoBaseURL: "https://github.com/razeen-bahadoor",
   helmChartRepo: "node-docker-demo",
-  helmChartValues : "live/${params.TARGETENV.toString().toLowerCase()}/${appName}",
+  helmChartValues : "live/${params.TARGETENV.toString().toLowerCase()}/${this.appName}",
   imageToDeploy: params.IMAGE_TO_DEPLOY
 )
 )
